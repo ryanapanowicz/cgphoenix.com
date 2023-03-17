@@ -1,0 +1,81 @@
+@import "@fontsource/dm-sans/400";
+@import "@fontsource/dm-sans/500";
+@import "@fontsource/dm-sans/700";
+@import url("./lomomotive-scroll.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply text-coal;
+    }
+
+    body,
+    button,
+    a,
+    input,
+    select,
+    textarea {
+        cursor: none;
+    }
+
+    ::selection {
+        background-color: #e53535;
+        color: white;
+    }
+}
+
+@layer components {
+    .cursor {
+        display: none;
+    }
+
+    @media (any-pointer: fine) {
+        .cursor {
+            display: block;
+            position: fixed;
+            width: 48px;
+            height: 48px;
+            margin-left: -24px;
+            margin-top: -24px;
+            border-radius: 50%;
+            background: white;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: exclusion;
+            /* Preset small scale to prevent blurring in Safari */
+            transform: scale3d(0.33, 0.33, 0.33);
+        }
+
+        .cursor.hide {
+            transform: scale3d(0, 0, 0);
+        }
+    }
+
+    .cursor-down {
+        transform: scale3d(0.5, 0.5, 0.5);
+    }
+
+    .cursor-grow {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@layer utilities {
+    .rendering-auto {
+        image-rendering: auto;
+    }
+
+    .rendering-crisp {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+
+    .rendering-pixelated {
+        image-rendering: pixelated;
+    }
+}
