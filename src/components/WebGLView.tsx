@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { isMobile } from "react-device-detect";
 import WebGLRenderer, {
     BufferShader,
     WebGL2NotAvailable
@@ -25,6 +26,9 @@ const WebGlView: React.FC<WebGLView> = ({
 
     // Setup WebGLRenderer on mount
     useEffect(() => {
+        // Don't setup if on mobile
+        if (isMobile) return;
+
         const mainShader = new BufferShader(main);
         const bufferShaders = buffers?.map((buffer: string) => {
             return new BufferShader(buffer);

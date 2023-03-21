@@ -27,7 +27,7 @@ export class BufferShader {
 
         this.scene = new THREE.Scene();
         this.scene.add(
-            new THREE.Mesh(new THREE.PlaneBufferGeometry(2, 2), this.material)
+            new THREE.Mesh(new THREE.PlaneGeometry(2, 2), this.material)
         );
 
         this.readBuffer = new THREE.WebGLRenderTarget(1024, 800, {
@@ -127,12 +127,12 @@ export default class WebGLRenderer {
         this.resolution = new THREE.Vector3(
             this.config.width,
             this.config.height,
-            window.devicePixelRatio
+            0
         );
 
         // Set renderer size
         this.renderer.setSize(this.config.width, this.config.height, false);
-        this.renderer.setPixelRatio(window.devicePixelRatio);
+        this.renderer.setPixelRatio(1);
 
         if (this.config.bufferShaders) {
             for (const buffer of this.config.bufferShaders) {
@@ -211,7 +211,7 @@ export default class WebGLRenderer {
                         buffer.uniforms.uResolution.value.set(
                             this.renderer?.domElement.width,
                             this.renderer?.domElement.height,
-                            window.devicePixelRatio
+                            0
                         );
 
                         buffer.render(this.renderer, this.camera);
@@ -236,7 +236,7 @@ export default class WebGLRenderer {
                 this.config.mainShader.uniforms.uResolution.value.set(
                     this.renderer?.domElement.width,
                     this.renderer?.domElement.height,
-                    window.devicePixelRatio
+                    0
                 );
 
                 this.config.mainShader.render(this.renderer, this.camera, true);

@@ -22,6 +22,9 @@ export const onRenderBody = ({
         className: "flex h-full flex-col bg-coal",
     });
     setPreBodyComponents([
+        <noscript id="gatsby-noscript" key="noscript">
+            This website needs Javascript enabled.
+        </noscript>,
         <div
             id="overlay"
             key="overlay"

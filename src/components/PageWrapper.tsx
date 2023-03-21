@@ -20,6 +20,24 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, path }) => {
             watch={[path]}
             onLocationChange={(scroll: any) => {
                 scroll.scrollTo(0, { duration: 0, disableLerp: true });
+
+                const hashlinks =
+                    document.querySelectorAll("a[data-scroll-to]");
+
+                hashlinks.forEach((link) => {
+                    let hashval = link.getAttribute("href");
+
+                    if (!hashval) return;
+
+                    let target = document.querySelector(hashval);
+
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        scroll.scrollTo(target);
+                    });
+                });
             }}
             containerRef={containerRef}
         >

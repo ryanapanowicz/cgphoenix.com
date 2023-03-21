@@ -1,5 +1,5 @@
 import gsap, { Sine } from "gsap";
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useRef } from "react";
 
 export interface TransitionContextType {
     transitioning: boolean;
@@ -21,21 +21,6 @@ export const useTransition = () => {
 
 const TransitionProvider: React.FC<TransitionProviderType> = ({ children }) => {
     const transition = useRef(false);
-
-    useEffect(() => {
-        const onPageLoad = () => {
-            handlePlay();
-        };
-
-        // Check if the page has already loaded
-        if (document.readyState === "complete") {
-            onPageLoad();
-        } else {
-            window.addEventListener("load", onPageLoad);
-
-            return () => window.removeEventListener("load", onPageLoad);
-        }
-    }, []);
 
     const handlePlay = (option = "out", callback?: () => void) => {
         // Prevent being called multiple times if still transitioing

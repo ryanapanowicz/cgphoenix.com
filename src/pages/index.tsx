@@ -48,7 +48,7 @@ const IndexPage: React.FC = ({ data }: any) => {
             >
                 <WebGlView
                     parent={mainSection}
-                    className="absolute left-0 top-0"
+                    className="absolute left-0 right-0 top-0 bottom-0 bg-neutral-100"
                     main={mainShader}
                     buffers={[bufferShader]}
                     fallback={<div>Fallback</div>}
@@ -114,40 +114,38 @@ const IndexPage: React.FC = ({ data }: any) => {
                             featured,
                         }: any) => (
                             <div key={id} className="w-full mb-8 sm:mb-16">
-                                <Link to={`work/${slug}`} className="group">
-                                    <>
-                                        <div className="overflow-hidden rounded">
-                                            {featuredImage(featured)}
+                                <Link to={`work/${slug}`} className="flex flex-col overflow-hidden group">
+                                    <div className="overflow-hidden rounded z-0">
+                                        {featuredImage(featured)}
+                                    </div>
+                                    <div className="flex flex-row flex-wrap items-center">
+                                        <div className="flex flex-col py-6 mr-3 md:mr-6 rounded whitespace-nowrap md:w-full xl:w-auto">
+                                            <h3 className="text-lg sm:text-2xl font-normal text-neutral-100">
+                                                {title}
+                                            </h3>
+                                            <p className="text-sm mb-0 text-neutral-400">
+                                                {subtitle}
+                                            </p>
                                         </div>
-                                        <div className="flex flex-row flex-wrap items-center">
-                                            <div className="flex flex-col py-6 mr-3 md:mr-6 rounded whitespace-nowrap md:w-full xl:w-auto">
-                                                <h3 className="text-lg sm:text-2xl font-normal text-neutral-100">
-                                                    {title}
-                                                </h3>
-                                                <p className="text-sm mb-0 text-neutral-400">
-                                                    {subtitle}
-                                                </p>
-                                            </div>
-                                            <div className="grid grid-rows-2 grid-flow-col gap-2 ml-auto md:ml-0">
-                                                {built_with &&
-                                                    built_with.map(
-                                                        (
-                                                            name: any,
-                                                            index: number
-                                                        ) => {
-                                                            return (
-                                                                <div
-                                                                    key={index}
-                                                                    className="text-xs text-center items-center font-light px-3 py-1 text-neutral-100 border border-neutral-600 rounded"
-                                                                >
-                                                                    {name}
-                                                                </div>
-                                                            );
-                                                        }
-                                                    )}
-                                            </div>
+                                        <div className="grid grid-rows-2 grid-flow-col gap-2 ml-auto md:ml-0">
+                                            {built_with &&
+                                                built_with.map(
+                                                    (
+                                                        name: any,
+                                                        index: number
+                                                    ) => {
+                                                        return (
+                                                            <div
+                                                                key={index}
+                                                                className="text-xs text-center items-center font-light px-3 py-1 text-neutral-100 border border-neutral-600 rounded"
+                                                            >
+                                                                {name}
+                                                            </div>
+                                                        );
+                                                    }
+                                                )}
                                         </div>
-                                    </>
+                                    </div>
                                 </Link>
                             </div>
                         )
@@ -161,7 +159,9 @@ const IndexPage: React.FC = ({ data }: any) => {
             >
                 <div className="flex flex-col justify-end min-h-screen px-6 sm:px-8 lg:px-16 bg-portrait bg-top bg-no-repeat">
                     <div className="mb-8 pt-[440px]">
-                        <h3 className="text-neutral-100 font-bold">About me —</h3>
+                        <h3 className="text-neutral-100 font-bold">
+                            About me —
+                        </h3>
                         <h1 className="text-neutral-100 font-bold text-2xl  md:text-5xl md:leading-tight tracking-tight py-2">
                             I’m passionate about designing digital experiences
                             that make people's lives easier and a better for
@@ -200,7 +200,7 @@ const IndexPage: React.FC = ({ data }: any) => {
 };
 
 export const query = graphql`
-    query {
+    {
         site {
             siteMetadata {
                 title
@@ -208,7 +208,7 @@ export const query = graphql`
                 keywords
             }
         }
-        allProject(sort: { order: ASC, fields: id }) {
+        allProject(sort: { id: ASC }) {
             nodes {
                 id
                 title
