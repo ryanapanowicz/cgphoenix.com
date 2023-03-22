@@ -114,7 +114,10 @@ const IndexPage: React.FC = ({ data }: any) => {
                             featured,
                         }: any) => (
                             <div key={id} className="w-full mb-8 sm:mb-16">
-                                <Link to={`work/${slug}`} className="flex flex-col overflow-hidden group">
+                                <Link
+                                    to={`work/${slug}`}
+                                    className="flex flex-col overflow-hidden group"
+                                >
                                     <div className="overflow-hidden rounded z-0">
                                         {featuredImage(featured)}
                                     </div>
@@ -164,17 +167,17 @@ const IndexPage: React.FC = ({ data }: any) => {
                         </h3>
                         <h1 className="text-neutral-100 font-bold text-2xl  md:text-5xl md:leading-tight tracking-tight py-2">
                             I’m passionate about designing digital experiences
-                            that make people's lives easier and a better for
+                            that make people's lives easier and better for
                             everyone.
                         </h1>
                         <p className="text-neutral-400 text-lg">
                             Working as a freelance Digital Design and PHP Web
                             Developer for 6+ years and then as a software
                             developer and project manager for an event ticketing
-                            platform startup for another 6 years, I’m currently
-                            back in freelance working on various projects. When
-                            I’m not working you can catch me outside exploring,
-                            hiking, or biking the parks in Pennsylvania.
+                            platform startup for another 6 years, I’m now back
+                            working freelance on various projects. When I’m not
+                            working you can catch me outside exploring, hiking,
+                            or biking the parks of Pennsylvania.
                         </p>
                     </div>
                     <div className="mb-32 w-full">
@@ -183,7 +186,7 @@ const IndexPage: React.FC = ({ data }: any) => {
                         </h3>
                         <ul className="list-none grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:text-lg justify-between text-neutral-100">
                             <li>UX/UI Design</li>
-                            <li>Art Direction </li>
+                            <li>Art Direction</li>
                             <li>Web Development</li>
                             <li>3D Visualization</li>
                             <li>Digital Design</li>

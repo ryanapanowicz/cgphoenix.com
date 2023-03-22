@@ -12,6 +12,7 @@ module.exports = {
     plugins: [
         "gatsby-plugin-image",
         "gatsby-plugin-sitemap",
+        "gatsby-source-moiracms",
         "gatsby-transformer-sharp",
         {
             resolve: "gatsby-plugin-manifest",

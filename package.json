@@ -23,6 +23,7 @@
     "gatsby-plugin-sharp": "^5.7.0",
     "gatsby-plugin-sitemap": "^6.7.0",
     "gatsby-source-filesystem": "^5.7.0",
+    "gatsby-source-moiracms": "github:ryanapanowicz/gatsby-source-moiracms",
     "gatsby-transformer-sharp": "^5.7.0",
     "gsap": "^3.11.2",
     "locomotive-scroll": "^4.1.4",
