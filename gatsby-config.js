@@ -7,7 +7,7 @@ module.exports = {
         description: "Ryan Apanowicz is Web Developer and Digital Designer",
         keywords:
             "Ryan Apanowicz, Web Developer, Digital Designer, Graphic Design, Developer, Designer,",
-        siteUrl: "https://ryan.apanowicz.io",
+        siteUrl: "https://cgphoenix.com",
     },
     plugins: [
         "gatsby-plugin-image",
