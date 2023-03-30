@@ -7,6 +7,9 @@
   "keywords": [
     "gatsby"
   ],
+  "engines": {
+    "node": ">=17.0.0"
+  },
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop -H 0.0.0.0",
@@ -17,14 +20,14 @@
   },
   "dependencies": {
     "@fontsource/dm-sans": "^4.5.9",
-    "gatsby": "^5.7.0",
-    "gatsby-plugin-image": "^3.7.0",
-    "gatsby-plugin-manifest": "^5.8.0",
-    "gatsby-plugin-sharp": "^5.7.0",
-    "gatsby-plugin-sitemap": "^6.7.0",
-    "gatsby-source-filesystem": "^5.7.0",
+    "gatsby": "^4.25.6",
+    "gatsby-plugin-image": "^2.25.0",
+    "gatsby-plugin-manifest": "^4.25.0",
+    "gatsby-plugin-sharp": "^4.25.1",
+    "gatsby-plugin-sitemap": "^5.25.0",
+    "gatsby-source-filesystem": "^4.25.0",
     "gatsby-source-moiracms": "github:ryanapanowicz/gatsby-source-moiracms",
-    "gatsby-transformer-sharp": "^5.7.0",
+    "gatsby-transformer-sharp": "^4.25.0",
     "gsap": "^3.11.2",
     "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
@@ -39,7 +42,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/three": "^0.149.0",
     "autoprefixer": "^10.4.8",
-    "gatsby-plugin-postcss": "^6.7.0",
+    "gatsby-plugin-postcss": "^5.25.0",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.2.7",
     "typescript": "^5.0.2"

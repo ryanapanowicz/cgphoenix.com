@@ -211,7 +211,7 @@ export const query = graphql`
                 keywords
             }
         }
-        allProject(sort: { id: ASC }) {
+        allProject(sort: { order: ASC, fields: id }) {
             nodes {
                 id
                 title

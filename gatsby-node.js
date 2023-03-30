@@ -5,7 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const result = await graphql(`
         query MyQuery {
-            allProject(sort: { id: ASC }) {
+            allProject(sort: { order: ASC, fields: id }) {
                 edges {
                     next {
                         id
