@@ -12,8 +12,13 @@ module.exports = {
     plugins: [
         "gatsby-plugin-image",
         "gatsby-plugin-sitemap",
-        "gatsby-source-moiracms",
         "gatsby-transformer-sharp",
+        {
+            resolve: "gatsby-source-moiracms",
+            options: {
+                endpoint: "https://api.cgphoenix.com/graphql",
+            },
+        },
         {
             resolve: "gatsby-plugin-manifest",
             options: {
@@ -50,9 +55,6 @@ module.exports = {
                 path: "./src/pages/",
             },
             __key: "pages",
-        },
-        {
-            resolve: "gatsby-source-moiracms",
         },
         {
             resolve: `gatsby-plugin-postcss`,
