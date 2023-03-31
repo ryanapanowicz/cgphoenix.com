@@ -166,18 +166,18 @@ const IndexPage: React.FC = ({ data }: any) => {
                             About me —
                         </h3>
                         <h1 className="text-neutral-100 font-bold text-2xl  md:text-5xl md:leading-tight tracking-tight py-2">
-                            I’m passionate about designing digital experiences
+                            I'm passionate about designing digital experiences
                             that make people's lives easier and better for
                             everyone.
                         </h1>
                         <p className="text-neutral-400 text-lg">
-                            Working as a freelance Digital Design and PHP Web
-                            Developer for 6+ years and then as a software
-                            developer and project manager for an event ticketing
-                            platform startup for another 6 years, I’m now back
-                            working freelance on various projects. When I’m not
+                            Working as a freelance Digital Designer and a
+                            Full-Stack Web Developer for 6+ years and then as a
+                            Software Engineer and Project Manager for an event
+                            ticketing platform for another 6 years, I'm now back
+                            working freelance on various projects. When not
                             working you can catch me outside exploring, hiking,
-                            or biking the parks of Pennsylvania.
+                            or biking the parks of Pennsylvania
                         </p>
                     </div>
                     <div className="mb-32 w-full">
