@@ -7,7 +7,7 @@ module.exports = {
         description: "Ryan Apanowicz is Web Developer and Digital Designer",
         keywords:
             "Ryan Apanowicz, Web Developer, Digital Designer, Graphic Design, Developer, Designer,",
-        siteUrl: "https://cgphoenix.com",
+        siteUrl: "https://ryanapanowicz.com",
     },
     plugins: [
         "gatsby-plugin-image",
@@ -16,7 +16,7 @@ module.exports = {
         {
             resolve: "gatsby-source-moiracms",
             options: {
-                endpoint: "https://api.cgphoenix.com/graphql",
+                endpoint: "https://api.ryanapanowicz.com/graphql",
             },
         },
         {
