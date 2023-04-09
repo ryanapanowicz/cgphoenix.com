@@ -191,7 +191,7 @@ const IndexPage: React.FC = ({ data }: any) => {
                             <li>3D Visualization</li>
                             <li>Digital Design</li>
                             <li>Mobile Design</li>
-                            <li>Fullstack Programming</li>
+                            <li>Full-Stack Programming</li>
                             <li>Illustration</li>
                         </ul>
                     </div>
